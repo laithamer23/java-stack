@@ -17,8 +17,13 @@ import com.example.RenderingBooks.services.BookService;
 	    @RequestMapping("/books")
 	    public String index(Model model) {
 	        List<Book> books = bookService.allBooks();
-	        model.addAttribute("books", books);
+	        model.addAttribute("data", books);
+	        model.addAttribute("name","Mhammad Esaa");
+	        
 //	        System.out.print(books);
-	        return "/show.jsp";
+	        return "show.jsp";
+	        
+	        
+	        
 	
 }}
